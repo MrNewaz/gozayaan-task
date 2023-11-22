@@ -42,15 +42,12 @@ function App() {
         }}
       >
         <CardTitle title="Expenses" />
-
         <TabBar data={data} chart={chart} setChart={setChart} />
-
         <PieChart
           isAnimated={isAnimated}
           background={chartBackground}
           total={totalExpenses}
         />
-
         <Legend data={data[0]} getColorForKey={getColorForKey} />
       </Card>
     </Container>

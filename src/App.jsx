@@ -22,10 +22,10 @@ function App() {
       maxWidth="sm"
       sx={{
         display: "flex",
-        justifyContent: { sm: "center", xs: "flex-start" },
+        justifyContent: "center",
         alignItems: "center",
         flexDirection: "column",
-        minHeight: { sm: "100dvh", xs: "auto" },
+        minHeight: "100dvh",
         py: 2,
       }}
     >

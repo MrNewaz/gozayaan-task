@@ -4,7 +4,7 @@ import {
   responsiveFontSizes,
   ThemeProvider,
 } from "@mui/material/styles"
-import App from "./App"
+import App from "App"
 
 const Theme = () => {
   const theme = createTheme({

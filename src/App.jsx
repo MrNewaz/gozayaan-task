@@ -1,11 +1,16 @@
 import { Card, Container } from "@mui/material"
 import CardTitle from "components/CardTitle"
 import PageTitle from "components/PageTitle"
+import TabBar from "components/TabBar"
+import data from "data/expense-data.json"
+import useChart from "hooks/useChart"
 
 function App() {
+  const { chart, setChart } = useChart(data)
+
   return (
     <Container
-      maxWidth="xs"
+      maxWidth="sm"
       sx={{
         display: "flex",
         justifyContent: { sm: "center", xs: "flex-start" },
@@ -28,6 +33,8 @@ function App() {
         }}
       >
         <CardTitle title="Expenses" />
+
+        <TabBar data={data} chart={chart} setChart={setChart} />
       </Card>
     </Container>
   )

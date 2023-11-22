@@ -4,7 +4,7 @@ const useChart = (data) => {
   const [chart, setChart] = useState(data[0].period)
   const [chartBackground, setChartBackground] = useState("")
   const [totalExpenses, setTotalExpenses] = useState(0)
-  const [animate, setAnimate] = useState(false)
+  const [isAnimated, setIsAnimated] = useState(false)
 
   const getColorForKey = (key) => {
     switch (key) {
@@ -55,11 +55,11 @@ const useChart = (data) => {
   )
 
   useEffect(() => {
-    setAnimate(true)
+    setIsAnimated(true)
     setTimeout(() => {
       const gradient = calculateGradient(chart)
       setChartBackground(gradient)
-      setAnimate(false)
+      setIsAnimated(false)
     }, 300)
   }, [chart, calculateGradient])
 
@@ -68,7 +68,7 @@ const useChart = (data) => {
     setChart,
     chartBackground,
     totalExpenses,
-    animate,
+    isAnimated,
     getColorForKey,
   }
 }

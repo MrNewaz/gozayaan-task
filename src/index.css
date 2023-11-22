@@ -1,1 +1,73 @@
+:root {
+  --personal: #4c49ed;
+  --other: #141197;
+  --shopping: #9d9bf4;
+  --phone: #4fd18b;
+  --decimals: #afadfe;
+  --card-bg: #fff;
+  --bg-tab: #f5f6fa;
+  --text-legend: #938fa3;
+  --active: #003eff;
+  --inactive: #373b47;
+}
 
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("../public/fonts/HelveticaNeueRegular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("../public/fonts/HelveticaNeueBold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("../public/fonts/HelveticaNeueLight.ttf") format("truetype");
+
+  font-weight: light;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("../public/fonts/HelveticaNeueMedium.ttf") format("truetype");
+  font-weight: medium;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+  width: 0.3rem;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-tab);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--text-legend);
+  transition: all 0.5s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--shopping);
+}

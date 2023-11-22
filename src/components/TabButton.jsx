@@ -20,7 +20,6 @@ const TabButton = ({ chart, item, setChart }) => {
           color: "var(--inactive)",
         },
       }}
-      key={item.period}
     >
       {item.period}
     </Button>

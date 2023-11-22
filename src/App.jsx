@@ -1,12 +1,13 @@
 import { Card, Container } from "@mui/material"
 import CardTitle from "components/CardTitle"
+import Legend from "components/Legend"
 import PageTitle from "components/PageTitle"
 import TabBar from "components/TabBar"
 import data from "data/expense-data.json"
 import useChart from "hooks/useChart"
 
 function App() {
-  const { chart, setChart } = useChart(data)
+  const { chart, setChart, getColorForKey } = useChart(data)
 
   return (
     <Container
@@ -35,6 +36,7 @@ function App() {
         <CardTitle title="Expenses" />
 
         <TabBar data={data} chart={chart} setChart={setChart} />
+        <Legend data={data[0]} getColorForKey={getColorForKey} />
       </Card>
     </Container>
   )

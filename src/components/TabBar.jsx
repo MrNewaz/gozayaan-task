@@ -16,7 +16,12 @@ const TabBar = ({ data, chart, setChart }) => {
       }}
     >
       {data.map((item) => (
-        <TabButton chart={chart} item={item} setChart={setChart} />
+        <TabButton
+          key={item.period}
+          chart={chart}
+          item={item}
+          setChart={setChart}
+        />
       ))}
     </Box>
   )

@@ -1,7 +1,7 @@
 services:
-  client:
+  gozayaan:
     build: ./
-    container_name: gozayaan
+    container_name: gozayaan_container
     ports:
       - "3000:3000"
     volumes:
